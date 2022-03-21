@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins",sans-serif;
+}
+
+.container {
+    max-width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.container h2 {
+    font-size: 25px;
+    color:#DA2535;
+    text-align: center;
+}
+
+.container .list {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /*to make it start new line on narrow width */
+    gap: 20px;
+    max-width: 650px;
+}
+
+.form-element input {
+    display:none;
+}
+
+.form-element label {
+    position: relative;
+    display:flex;
+    justify-content:center;
+    height:100%;
+    cursor:pointer;
+    border:2px solid #ddd;
+    background:#fff;
+    text-align:center;
+    transition:all 200ms ease-in-out;
+    border-radius:5px;
+}
+
+.form-element .icon {
+    margin-top:10px;
+    font-size:30px;
+    color:#555;
+    transition:all 200ms ease-in-out;
+}
+
+.form-element .title {
+    width: 100%;
+    font-size:15px;
+    color:#555;
+    padding: 10px;
+    transition:all 200ms ease-in-out;
+}
+
+.form-element label:before {
+    content:"✓";
+    width:18px;
+    height:18px;
+    position:absolute;
+    margin: -12px;
+    background:#DA2535;
+    color:#fff;
+    text-align: center;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.form-element input:checked + label:before {
+    opacity:1;
+    transform:scale(1);  
+}
+
+.form-element input:checked + label .icon {
+    color:#DA2535;
+}
+
+.form-element input:checked + label .title {
+    color: #DA2535;
+}
+
+.form-element input:checked + label {
+    border:2px solid #DA2535;
+}
